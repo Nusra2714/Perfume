@@ -1,0 +1,280 @@
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/*navigation section*/
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color:pink ; 
+    z-index: 1000;
+    padding: 20px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    padding-left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color:rgb(255, 0, 132);
+}
+
+.navbar .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links li {
+    display: inline;
+}
+
+.navbar .nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color:rgb(255, 0, 132) ;
+}
+
+/*home section*/
+
+.box{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    display: flex;   
+}
+
+.box-image{
+    height: 500px;
+}
+
+.box-text{
+    width:100%;
+    height: auto;
+    margin-left: 20px;
+    text-align:center;
+}
+
+.para{
+    margin-top: 200px;
+}
+
+@media (max-width: 100%) {
+    .box {
+        flex-direction: column;
+    }
+}
+
+/* Products Section */
+
+.products {
+    padding: 50px ;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.product-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    width: 500px;
+    height: 500px;
+    display: block;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    color: red;
+    margin-top: 0;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.product-info p {
+    font-size: 16px;
+    line-height: 1.5;
+    color:rgb(255, 0, 132);
+}
+
+/* About Section */
+
+.about {
+    padding: 100px 0;
+    background-color: #fa055795;
+    text-align: center;
+}
+
+.about p {
+    color: white;
+    font-size: 20px;
+    line-height: 1.8
+}
+
+/*Contact section*/
+
+.contact p {
+    font-size: 20px;
+}
+
+.contact p a{
+    color: rgb(246, 130, 14);
+}
+
+
+/* For large screens (desktops, laptops) */
+@media (min-width: 1200px) {
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .navbar {
+        padding: 20px 0;
+    }
+
+    .product-grid {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .product-card img {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+/* For medium screens (tablets, small laptops) */
+@media (max-width: 1200px) and (min-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .navbar .nav-links {
+        gap: 15px;
+    }
+
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+
+    .product-card img {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+/* For small screens (mobile phones) */
+@media (max-width: 767px) {
+    .navbar .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .nav-links {
+        display: none; /* Hide navigation links for mobile */
+    }
+
+    .navbar .logo {
+        font-size: 18px;
+    }
+
+    .box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .box-text {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .product-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .about, .contact {
+        padding: 50px 20px;
+    }
+
+    .about p, .contact p {
+        font-size: 16px;
+    }
+}
+
+/* For extra small screens */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .product-info h3 {
+        font-size: 24px;
+    }
+
+    .product-info p {
+        font-size: 14px;
+    }
+}
