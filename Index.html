@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="color: white; background-color:purple;">
-  
+<body style="color: white; background-color:purple;"> 
     <!-- Navigation -->
-
     <nav class="navbar">
         <div class="container">
+            <div class="nav-toggler">
+                <span></span>
+            </div>
             <h1 class="logo">FOREVER FRAGRANCE</h1>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -26,8 +27,8 @@
     
     <!--Home section-->
     <section id="home">
-        <div style="width: auto; height: auto; text-align: center; margin-top: 20px;">
-            <img src="images/fragrance forever.jpg" width="1000px" height="500px">
+        <div class="homeimg" style="width: auto; height: auto; text-align: center; margin-top: 20px;">
+            <img src="images/fragrance forever.jpg" width=100% height="500px">
         </div>
         <div class="box">
             <div class="box-image">
@@ -99,4 +100,11 @@
     </footer>
 
 </body>
+<script>
+    const toggler = document.querySelector('.nav-toggler')
+    const menulist = document.querySelector('nav ul')
+    toggler.addEventListener('click', ()=>{
+        menulist.classList.toggle('showlinks')
+    })
+</script>
 </html>
